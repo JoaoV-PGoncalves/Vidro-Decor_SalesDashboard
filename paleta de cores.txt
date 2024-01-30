@@ -1,0 +1,12 @@
+Paleta de cores:
+Cinzas: #363740, #8C8C8C, #EFEFEF (background)
+Verdes: #21402E, #0C5920, #1F7334, #0ABF04 (#BF0303, vermelho), #21A61C, #0ABF04, #BBF2BE
+
+
+#363740
+#8C8C8C
+#21402E
+#0C5920/#1F7334
+#0ABF04
+#21A61C
+#EFEFEF
