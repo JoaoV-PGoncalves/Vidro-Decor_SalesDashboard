@@ -1,0 +1,176 @@
+O QUE FALTA:
+
+- COMPRARACAO COM PERIODO ANTERIOR
+	. CONFIGURAR FILTRO DE "Comparar com..." -->> CHECK
+	. Criar as medidas baseadas no filtro comparar com -->> CHECK
+	. Adicionar mini visualizaçao de variaçao entre valores de "Filtro1" e valores de filtro "Comparar com..." -->> CHECK
+	. CONFIGURAR O CONTEXTO DOS SOMATORIOS DAS VISUALIZACOES PARA QUE SE ADAPTE A QUALQUER -->> CHECK
+	. OUTROS GRAFICOS PARA ANALISES MAIS PROFUNDAS (GRAFICOS DE DISPERSAO E ETC...) -> pesquisar no proprio site da Microsoft/Power BI CHECK
+		- waterfall chart UNAPPROVED
+		- scatter chart CHECK
+		- ribbon chart UNAPPROVED
+
+- TOTAL VALUES DYNAMIC DASHES / FIXED DASHES CHECK
+- AVREAGED VALUES DYNAMIC DASHES / FIXED DASHES CHECK
+- UNIT VALUES DYNAMIC DASHES / FIXED DASHES CHECK
+
+- TABELAS
+	. CAMPO + VALOR TOTAL FATURAMENTO + VALOR TOTAL M.C. + % M.C. CHECK
+	. EXPANSAO (VISUALIZACOA EM PAGINA) CHECK
+		. CAMPO + VALORES TOTAIS (VENDAS, FATURAMENTO, TARIFA, FRETE, IMPOSTO, PRECO CUSTO, M.C., % M.C.) CHECK
+		. CAMPO + VALORES UNITARIOS (UNIDADES VENDIDAS, RELACAO UN VENDIDAS E VENDAS, FATURAMENTO, FRETE, TARIFA, FRETE, IMPOSTO, PRECO CUSTO, M.C., % M.C.) CHECK
+	. COMO FAZER COM QUE FILTROS EM SLICERS DE PAGINA1 TAMBEM SEJAM APLICADOS NA PAGINA2. CHECK
+	. CURVA ABC UTILIZANDO ALGUMA ITERATIVIDADE DA DAX ***STILL MISSING***
+- INCLUIR ARVORE DE DECOMPOSICAO CHECK
+
+- EXPERIENCIA DO USUARIO
+	. CONFIGURACAO DE TOOLTPIS CHECK
+	. AJUSTE DE DESIGN CHECK
+	. CONFIGURACAO DE TEMPLATE DE CORES CHECK
+	. TERMINAR CONFIGURACAO DE DESIGN DAS VARIACOES COMPARAR COM... CHECK
+	. ADICIONAR SLICERS AOS BOTOES CHECK
+	. CONFIGURACAO DE BOTOES PARA INTERATIVIDADE DO USUARIO - BOOKMARKS CHECK
+	. CONFIGURAR FILTROS PRE-FABRICADOS (LUXO)
+	. ADICIONAR FILTROS MAIS ESPECIFICOS (LUXO)
+
+- REIMPORTAR OS DADOS DA TABELA FATO (CERTIFICAR-ME DA INTEGRIDADE DE TAIS - HA VARIAS FALHAS... CONFERIR PLANILHA DE PRECO DE CUSTOS DE OUTUBRO E NOVEMBRO)
+	. VERIFICACAO DE INTEGRALIDADE DE DADOS DE PRECO DE CUSTO DE OUTUBRO ATE DEZEMBRO CHECK
+	. PLANILHA DE VENDAS MELI01 - OUT-DEZ (DIRETO PLATAFORMA) CHECK
+	. PLANILHA DE VENDAS MELI02 - OUT-DEZ (DIRETO PLATAFORMA) CHECK
+	. PLANILHA DE VENDAS SHOPEE - OUT-DEZ (DIRETO PLATAFORMA) CHECK
+	. PLANILHA DE VENDAS AMAZON - OUT-DEZ (DIRETO PLATAFORMA)
+	. PLANILHA DE VENDAS MAGALU - OUT-DEZ (DIRETO PLATAFORMA)
+	. APURAR VALORES EM TABELA PADRAO DE VENDAS
+	. AGREGAR TUOD JUNTO
+	. REIMPORTAR NO POWER BI CHECK
+	
+
+
+
+
+
+
+
+
+
+
+Desenvolva um layout prototipo para um dashboard visualmente impactante no Power BI, que integrara uma base de dados complexa com milhares de linhas de vendas dentro de marketpalces de ecommerce. Deve ter um design flexível que permita uma análise agregada de variáveis-chave (quantidade de vendas, unidades vendidas, valor de faturamento, valor de tarifa, valor de frete vendedor, valor de frete comprador, valor de preço de custo, valor de imposto, valor de margem de contribuiçao), proporcionando uma visão holística dos dados a serem visualizados de forma acumulada por outras variavies (marketplace, SKU do produto, categoria, fornecedores, data, estado de destino da venda). Utilizando recursos avançados, como filtros interativos e medidas personalizadas, o dashboard deve oferecer uma experiência analítica intuitiva e eficaz.
+
+Dashboard (Relatorio Vendas interativo) -> Posteriormente: Dashboard Relatorio de vendas (expandido para id's dos anuncios) -> Dashboard Fluxo de Estoque -> Historico de preço de custo -> Impostos do Lucro Real calculados -> Precificaçao Dinamica
+
+- Visualizaçao de dados
+- Indicadores chave de desempenho (KPI)
+- Personalizaçao e interatividade
+- Atualizaçao em tempo real
+- Apresentaçao concisa, objetiva e direta
+- Facilidade de navegaçao
+- Suporte a tomada de decisoes
+- Graficos, tabelas e medidas
+
+________________________________________________________________________________________________________________________________________________________
+
+ESTRUTURAS DE DADOS DA BASE DE DADOS
+Planilha principal: DATA x MARKETPLACE x ESTADO DE DESTINO DA VENDA x SKU x ID DO ANUNCIO x ID DO PEDIDO x STATUS x UNIDADES VENDIDAS x FATURAMENTO x TARIFA x FRETE VENDEDOR x FRETE COMPRADOR
+Planilha secundaria: Fornecedores x SKU x Data (apurado internamente)
+Planilha secundaria: Categoria x SKU (apurado internamente)
+Planilha secundaria: Preço de Custo x SKU x Data (apurado internamente ou via api)
+	- SKU x Preço de Custo Médio Antigo x Saldo de estoque x Data da alteraçao x Qtd. Estoque Nova Entrada x Novo Preço de Custo x Novo preço de Custo Médio (calculado)
+	- SKU x Data Alteraçao x Novo Preço de Custo Médio
+Planilha secudaria: Tipo de imposto x Marketplace
+Planilha secundaria: Imposto x SKU x Preço de Custo x Faturamento x Fornecedor x Estado de Destino da Venda (apurado e calculado internamente)
+________________________________________________________________________________________________________________________________________________________
+********************************************************************************************************************************************************
+********************************************************************************************************************************************************
+Relatorio de Vendas
+Precificaçao dinamica
+Gestao de fluxo de estoque e Gestao de Compras de Reposiçao
+Conciliaçao financeira
+Business Inteligence Analyst com Inteligencia artifiical
+
+
+dados a serem visualizados (deve haver a opçao de serem selecionados):
+- DADOS 1: Quantidade de vendas & Unidades Vendidas
+- DADOS 2: Faturamento & Tarifa & Frete Vendedor & Frete Comprador & Recebimento Estimado
+- DADOS 3: Preço de Custo
+- DADOS 4: Imposto' & Imposto ''
+- DADOS 5: M.C.' & M.C.''
+
+medidas:
+- MEDIDA 1: valores totais (agregaçao) CHECK
+- MEDIDA 2: percentual de valores totais (em relaçao a uma referencia) CHECK
+- MEDIDA 3: valores unitarios CHECK
+- MEDIDA 4: curva ABC em relaçao a faturamento e/ou m.c. MISSING
+- MEDIDA 5: curva ZYX em relaçao a faturamento e/ou m.c. MISSING
+- MEDIDA 6: percentual de participaçao de faturamento e m.c. CHECK
+- MEDIDA 7: precentual de variaçao em relaçao a um conjunto de valores de comparaçao CHECK
+
+
+visualizar por (em valores reais):
+- CAMPO 1: Data (pre-venda) (apurado do marketplace)
+	- CAMPO 2.1: Marketplace (pre-venda) (apurado do marketplace)
+	- CAMPO 2.2: Fornecedores (pre-venda) (levantamento interno)
+		- CAMPO 3: Categorias (pre-venda) (levantamento interno)
+			- CAMPO 4: Estado de destino da venda (pos-venda) (apurado do marketplace)
+				- CAMPO 5: SKU (pos-venda) (apurado do marketplace)
+					- CAMPO 6: ID DO ANUNCIO
+						- CAMPO 7: ID DO PEDIDO
+
+formas de visualizaçao dos dados em cada campo:
+- VISUALIZACAO 1: cartoes com valores totais, percentuais de valores totais, valores unitarios CHECK
+	- VISUALIZACAO 1.1: grafico de barras empilhadas ou agrupadas OU grafico de pizza ou rosca CHECK
+- VISUALIZACAO 2: tabelas ordenadas por curva ABC ou curva ZYX MISSING
+- VISUALIZACAO 3: graficos serie temporais CHECK
+- VISUALIZACAO 4: mapas de arvores/hierarquias EM ANDAMENTO
+- VISUALIZACAO 5: grafico de radar
+- VISUALIZACAO 6: grafico de dispersao entre duas metricas
+- VISUALIZACAO 7: matriz
+- VISUALIZACAO 8: distribuiçao de frequencias (de uma variavel em relaçao a outra)
+
+filtros:
+- FILTRO 1: datas CHECK
+- FILTRO 2.1: Marketplaces CHECK
+- FILTRO 2.2: Fornecedores CHECK
+- FILTRO 3: Categorias CHECK
+- FILTRO 4: Estado de Destino da Venda CHECK
+- FILTRO 5: SKU CHECK
+- FILTRO 6: ID do Anuncio CHECK
+- FILTRO 7: ID do Pedido CHECK
+- FILTRO CORINGA 1: Curva ABC MISSING
+- FILTROS CORINGAS etc.: 
+- Sejam x e y CAMPOS. Os filtros aplicados em x, tambem aplicam-se a y, e vice-versa.
+- Os filtros coringas também podem ser aplicados em qualquer campo
+
+********************************************************************************************************************************************************
+********************************************************************************************************************************************************
+________________________________________________________________________________________________________________________________________________________
+
+filtrar por:
+- Marketpalce
+- Data
+- Estado de destino da venda
+- SKU
+- Categorias
+- Fornecedores
+- unidades vendidas por pedido
+- preço de venda
+- % tarifa
+- Frete vendedor
+- % M.C.
+- Curva ABC
+- unidades vendidas por pedido
+- faixa de preço unitario
+- valor unitario frete vendedor
+- Faixa de percentual de impostos estimados no Lucro Real
+- faixa de m.c
+- comparar com...
+
+outras visualizaçoes:
+- varias combinaçoes de variaveis
+	. distribuiçao de frequencia de quantidade de vendas por faixa de preço
+	. distribuiçao de frequencia de percentual de tarifa por faixa de preço
+	. distribuiçao da frequencia de preço unitario por intervalo de datas
+	. o percentual dos valores tarifa, imposto, preço de custo, frete vendedor e margem de contribuiçao em relaçao ao faturamento
+	. os valores unitarios de tarifa, imposto, preço de custo, frete vendedor, margem de contribuiçao e faturamento em relacao as vendas e em relaçao as unidades vendidas
+	. lista de curva ABC de datas, marketplaces, fornecedores, categorias, sku
+	. mapa do brasil
+	. etc...
